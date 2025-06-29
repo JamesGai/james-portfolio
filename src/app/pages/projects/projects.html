@@ -1,1 +1,33 @@
-<p>projects works!</p>
+<div class="projects-page">
+  <div class="card-wrapper" *ngFor="let project of projects">
+    <div class="custom-card">
+      <div class="card-title-wrapper">
+        <h2>{{ project.title }}</h2>
+      </div>
+      <div class="project-flex">
+        <div class="project-image">
+          <img [src]="project.images[0]" [alt]="project.title" />
+        </div>
+        <div class="project-text">
+          <p>{{ project.introduction }}</p>
+          <div class="learn-more-wrapper">
+            <a class="learn-more-btn" (click)="openProjectDetails(project)">
+              &gt;&gt; Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-project-detail-modal
+  *ngIf="selectedProject"
+  [title]="selectedProject.title"
+  [introduction]="selectedProject.introduction"
+  [images]="selectedProject.images"
+  [tasks]="selectedProject.tasks"
+  [techStack]="selectedProject.techStack"
+  [github]="selectedProject.github"
+  (closeModal)="closeProjectDetails()"
+></app-project-detail-modal>
