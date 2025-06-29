@@ -2,12 +2,10 @@
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.85);
-  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  // Ensure overflow doesn't shift layout
+  z-index: 99999999;
   overflow: auto;
 }
 
@@ -21,7 +19,7 @@
   border-radius: 12px;
   color: #e0e0e0;
   box-shadow: 0 0 20px #00ffc3;
-  margin: auto; /* crucial for vertical center in scrollable overflow */
+  margin: auto;
 }
 
 
@@ -106,5 +104,15 @@ h3 {
 
 .section ul li {
   margin-bottom: 10px;
+}
+
+.section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00ffc3;
+  letter-spacing: 0.5px;
+  margin: 10px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 

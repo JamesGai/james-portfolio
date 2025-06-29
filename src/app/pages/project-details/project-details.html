@@ -1,5 +1,5 @@
-<div class="modal-overlay">
-  <div class="modal-card">
+<div class="modal-overlay" (click)="close()">
+  <div class="modal-card" (click)="$event.stopPropagation()">
     <div class="modal-header">
       <h2>{{ title }}</h2>
       <button class="close-btn" (click)="close()">Close</button>
@@ -16,21 +16,21 @@
     </div>
 
     <div class="section">
-      <h3>🎯 Task</h3>
+      <h3 class="section-title">🎯 Task</h3>
       <ul>
         <li *ngFor="let task of tasks">{{ task }}</li>
       </ul>
     </div>
 
     <div class="section">
-      <h3>🧰 Tech Stack</h3>
+      <h3 class="section-title">🧰 Tech Stack</h3>
       <ul>
         <li *ngFor="let tech of techStack">{{ tech }}</li>
       </ul>
     </div>
 
     <div class="section">
-      <h3>🔗 GitHub</h3>
+      <h3 class="section-title">🔗 GitHub</h3>
       <ng-container *ngIf="github; else confidential">
         <a [href]="github" target="_blank">{{ github }}</a>
       </ng-container>
