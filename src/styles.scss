@@ -42,3 +42,8 @@ nav a.active {
 body.modal-open {
   overflow: hidden;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  display: none;
+}
