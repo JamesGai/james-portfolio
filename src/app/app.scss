@@ -72,4 +72,18 @@ nav {
   .show-desktop {
     display: none;
   }
+  .toolbar {
+    justify-content: center;
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    left: 0;
+  }
+
+  .title {
+    margin: 0 auto;
+    font-size: 1.5rem;
+  }
 }
