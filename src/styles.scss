@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #e0e0e0;
+}
+
+body {
+  background-color: #121212;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f1f1f;
+  padding: 12px 24px;
+  border-bottom: 1px solid #2c2c2c;
+}
+
+nav a {
+  margin-left: 24px;
+  color: #e0e0e0;
+  font-weight: 600;
+}
+
+nav a.active {
+  color: #00ffc3;
+}

@@ -1,0 +1,149 @@
+.about-page {
+  color: #e0e0e0;
+}
+
+.card-wrapper {
+  max-width: 960px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.custom-card {
+  background-color: #1f1f1f;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  padding: 16px;
+}
+
+.card-title-wrapper {
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.card-title-wrapper h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00ffc3;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.card-title-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #333; // Dark grey line
+  z-index: 0;
+}
+
+.card-content {
+  padding: 0;
+}
+
+.about-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 250px;
+  line-height: 1.6;
+}
+
+.about-text p {
+  margin-bottom: 12px;
+}
+
+.about-image {
+  flex-shrink: 0;
+}
+
+.about-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #00ffc3;
+  box-shadow: 0 0 12px rgba(0, 255, 195, 0.3);
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  justify-content: center;
+}
+
+.grid-3-cols {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.icon-card {
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 255, 195, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  height: 120px;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-card:hover {
+  transform: scale(1.07);
+  background-color: #333333;
+  box-shadow: 0 0 20px rgba(0, 255, 195, 0.3);
+}
+
+.icon-card img {
+  width: 55px;
+  height: 55px;
+  filter: drop-shadow(0 0 3px rgba(0, 255, 195, 0.2));
+}
+
+.icon-label {
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: center;
+  color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .about-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image {
+    order: -1;
+    margin-bottom: -15px;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .icon-card img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon-label {
+    font-size: 12px;
+  }
+
+  .icon-card {
+    height: 90px;
+  }
+}
